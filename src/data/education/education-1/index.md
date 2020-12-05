@@ -1,9 +1,10 @@
 ---
 category: 'education'
-university: 'Columbia University'
-degree: 'Bachelor'
-startDate: 'Oct 2005'
-endDate: 'Jul 2008'
+university: 'Karlsruhe Insitute of Technology'
+city: 'Karlsruhe, Germany'
+degree: 'Physics (B.Sc. - incomplete)'
+startDate: 'Oct 2015'
+endDate: 'Jul 2016'
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Studied physics and mathematics for one year before transferring to Jacobs University Bremen.

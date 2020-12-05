@@ -2,9 +2,10 @@ import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { motion, AnimatePresence } from 'framer-motion';
 
+import Sidebar from 'components/Sidebar';
 import Header from 'components/Header';
 import Footer from 'components/Footer';
-import Newsletter from 'components/Newsletter';
+// import Newsletter from 'components/Newsletter';
 
 import 'assets/styles/global.css';
 import GlobalStyles from 'assets/styles/globalStyles';
@@ -31,6 +32,7 @@ const Layout: React.FC<Props> = ({ children }) => {
       <AnimatePresence exitBeforeEnter>
         <Styled.Layout>
           <Header siteTitle={data.site.siteMetadata.title} />
+          <Styled.Div></Styled.Div>
           <motion.div
             initial={{ y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
@@ -38,7 +40,6 @@ const Layout: React.FC<Props> = ({ children }) => {
             transition={{ delay: 0.2 }}
           >
             {children}
-            <Newsletter />
             <Footer />
           </motion.div>
         </Styled.Layout>

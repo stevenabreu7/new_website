@@ -1,9 +1,9 @@
 ---
 category: 'experiences'
-company: 'Netlify'
-position: 'Senior Frontend Developer'
-startDate: 'Jun 2015'
-endDate: 'Jan 2018'
+company: 'Jacobs University'
+position: 'Teaching Assistant'
+startDate: 'Sep 2017'
+endDate: 'May 2019'
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+Worked as a teaching assistant for four different courses. Among them, I was head teaching assistant for the Machine Learning course.

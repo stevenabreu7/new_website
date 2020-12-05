@@ -1,11 +1,9 @@
 ---
 category: 'experiences'
-company: 'Aizoon Reply'
-position: 'UI/UX Designer'
-startDate: 'Jan 2011'
-endDate: 'May 2013'
+company: 'Bloomberg LP'
+position: 'Software Engineering Intern'
+startDate: 'Summer 2018'
+endDate: 'Summer 2020'
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+Spent three summer internships working for Bloomberg LP on different machine learning projects with financial derivatives. Spent summer 2018 in the London office, summer 2019 in the New York HQ and summer 2020 in the London office (working remotely from Frankfurt).

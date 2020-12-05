@@ -7,6 +7,7 @@ import TitleSection from 'components/ui/TitleSection';
 import FormatHtml from 'components/utils/FormatHtml';
 
 import { SectionTitle } from 'helpers/definitions';
+import { faLocationArrow, faMapPin } from '@fortawesome/free-solid-svg-icons';
 
 interface Education {
   node: {
@@ -15,6 +16,7 @@ interface Education {
     frontmatter: {
       university: string;
       degree: string;
+      city: string;
       startDate: string;
       endDate: string;
     };
@@ -40,6 +42,7 @@ const Education: React.FC = () => {
             html
             frontmatter {
               university
+              city
               degree
               startDate
               endDate
@@ -61,7 +64,7 @@ const Education: React.FC = () => {
         const {
           id,
           html,
-          frontmatter: { university, degree, startDate, endDate }
+          frontmatter: { university, city, degree, startDate, endDate }
         } = item.node;
 
         return (
@@ -69,6 +72,7 @@ const Education: React.FC = () => {
             key={id}
             title={university}
             subtitle={degree}
+            subsubtitle={city}
             content={<FormatHtml content={html} />}
             startDate={startDate}
             endDate={endDate}

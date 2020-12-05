@@ -1,9 +1,9 @@
 ---
 category: 'experiences'
-company: 'Facebook'
-position: 'Frontend Developer'
-startDate: 'May 2013'
-endDate: 'Jun 2015'
+company: 'Carnegie Mellon University'
+position: 'Research Assistant'
+startDate: 'Sep 2018'
+endDate: 'Dec 2018'
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+Worked in the DELPHI research group at CMU on epidemiological forecasting using machine learning methods.

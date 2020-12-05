@@ -1,6 +1,8 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 
+import TitleSection from 'components/ui/TitleSection';
+import Container from 'components/ui/Container';
 import Banner from 'components/ui/Banner';
 
 import { SectionTitle } from 'helpers/definitions';
@@ -29,13 +31,16 @@ const HeroBanner: React.FC = () => {
   const heroBanner: SectionHeroBanner = markdownRemark.frontmatter;
 
   return (
-    <Banner
-      title={heroBanner.title}
-      subtitle={heroBanner.subtitle}
-      content={heroBanner.content}
-      linkTo={heroBanner.linkTo}
-      linkText={heroBanner.linkText}
-    />
+    <Container section>
+      <TitleSection title={"Work in progress"} subtitle={"This website is still under construction!"} />
+    </Container>
+    // <Banner
+    //   title={heroBanner.title}
+    //   subtitle={heroBanner.subtitle}
+    //   content={heroBanner.content}
+    //   linkTo={heroBanner.linkTo}
+    //   linkText={heroBanner.linkText}
+    // />
   );
 };
 
