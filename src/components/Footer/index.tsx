@@ -7,7 +7,8 @@ import * as Styled from './styles';
 const Footer: React.FC = () => (
   <Styled.Footer>
     <Container>
-      <Styled.Links>
+      <p style={{width:"100%",textAlign:"center"}}>∆ steven abreu 2020</p>
+      {/* <Styled.Links>
         <Styled.Link href="https://github.com/stevenabreu7" rel="noreferrer noopener" target="_blank">
           GitHub
         </Styled.Link>
@@ -17,7 +18,7 @@ const Footer: React.FC = () => (
         <Styled.Link href="mailto:stevenabreu7@gmail.com">
           Email
         </Styled.Link>
-      </Styled.Links>
+      </Styled.Links> */}
     </Container>
   </Styled.Footer>
 );

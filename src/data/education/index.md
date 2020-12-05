@@ -1,5 +1,5 @@
 ---
 category: 'education section'
-title: ''
+title: 'Studies'
 subtitle: 'Education'
 ---

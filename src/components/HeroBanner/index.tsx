@@ -6,6 +6,7 @@ import Container from 'components/ui/Container';
 import Banner from 'components/ui/Banner';
 
 import { SectionTitle } from 'helpers/definitions';
+import { Separator } from 'components/ui/TitleSection/styles';
 
 interface SectionHeroBanner extends SectionTitle {
   content: string;

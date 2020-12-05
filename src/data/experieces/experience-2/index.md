@@ -1,9 +1,10 @@
 ---
 category: 'experiences'
-company: 'Bloomberg LP'
-position: 'Software Engineering Intern'
-startDate: 'Summer 2018'
-endDate: 'Summer 2020'
+company: 'Carnegie Mellon University'
+position: 'Research Assistant'
+city: 'Pittsburgh, USA'
+startDate: 'Sep 2018'
+endDate: 'Dec 2018'
 ---
 
-Spent three summer internships working for Bloomberg LP on different machine learning projects with financial derivatives. Spent summer 2018 in the London office, summer 2019 in the New York HQ and summer 2020 in the London office (working remotely from Frankfurt).
+Worked in the [DELPHI](http://delphi.cmu.edu) research group at CMU on epidemiological forecasting using machine learning methods.

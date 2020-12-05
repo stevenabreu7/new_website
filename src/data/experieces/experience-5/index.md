@@ -1,8 +1,9 @@
 ---
 category: 'experiences'
-company: 'Early Stage Researcher'
-position: 'University of Groningen'
-startDate: '2020'
+company: 'University of Groningen'
+position: 'Early Stage Researcher'
+city: 'Groningen, Netherlands'
+startDate: 'Nov 2020'
 endDate: 'Present'
 ---
 

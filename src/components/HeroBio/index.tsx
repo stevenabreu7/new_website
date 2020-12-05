@@ -1,10 +1,8 @@
 import React from 'react';
 import { Link, useStaticQuery, graphql } from 'gatsby';
-import Img from 'gatsby-image';
 
+import BioItem from 'components/ui/BioItem';
 import Container from 'components/ui/Container';
-import Button from 'components/ui/Button';
-import TitleSection from 'components/ui/TitleSection';
 
 import ProfileImg from "../../assets/images/profile.jpg";
 
@@ -34,6 +32,13 @@ const HeroBio: React.FC = () => {
         <Styled.Superdiv>
           <Styled.LeftPanel>
             <Styled.Image src={ProfileImg} />
+            <Styled.Contact>
+              <BioItem icon={["fa", "map-marker-alt"]} text={"groningen, nl"} />
+              <BioItem icon={["fa", "paper-plane"]} text={"email"} link={"mailto:stevenabreu7@gmail.com"} />
+              <BioItem icon={["fab", "linkedin"]} text={"linkedin"} link={"http://linkedin.com/in/stevenabreu7"} />
+              <BioItem icon={["fab", "github"]} text={"github"} link={"http://github.com/stevenabreu7"} />
+              <BioItem icon={["fab", "instagram"]} text={"instagram"} link={"http://instagram.com/stevenabreu7"} />
+            </Styled.Contact>
           </Styled.LeftPanel>
 
           <Styled.Content>
@@ -45,12 +50,13 @@ const HeroBio: React.FC = () => {
             <Styled.IntroParagraph>
               {"I am currently working as a PhD student on non-digital computing theory with the goal of exploiting physical phenomena for computation - with particular attention to neuromorphic applications."}
             </Styled.IntroParagraph>
+            <Styled.IntroParagraph>
+              <i>
+                {"This website is still under construction, check back soon.."}
+              </i>
+            </Styled.IntroParagraph>
           </Styled.Content>
         </Styled.Superdiv>
-        {/* <Styled.Content>{"content"}</Styled.Content> */}
-        {/* <Link to={linkTo}>
-          <Button primary>{linkText}</Button>
-        </Link> */}
       </Container>
     </Styled.Banner>
   );

@@ -20,7 +20,7 @@ const Timeline: React.FC<Props> = ({ title, subtitle, subsubtitle, content, star
       </Styled.Date>
       <Styled.Title>{title}</Styled.Title>
       <Styled.Subtitle>{subtitle}</Styled.Subtitle>
-      <Styled.Subtitle>{subsubtitle}</Styled.Subtitle>
+      <Styled.Location>{subsubtitle}</Styled.Location>
     </Styled.Details>
     <Styled.Content>{content}</Styled.Content>
   </Styled.Timeline>

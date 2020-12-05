@@ -7,4 +7,4 @@ startDate: 'Nov 2020'
 endDate: 'now'
 ---
 
-For more details, see publications.
+More details coming.

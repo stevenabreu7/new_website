@@ -14,7 +14,7 @@ export const Details = styled.div`
 `;
 
 export const Content = styled.div`
-  ${tw`w-full sm:w-2/3 mt-4 sm:mt-0`};
+  ${tw`w-full sm:w-2/3 mt-4 sm:mt-8`};
 `;
 
 export const Title = styled.div`
@@ -22,7 +22,11 @@ export const Title = styled.div`
 `;
 
 export const Subtitle = styled.div`
-  ${tw`text-xs`};
+  ${tw`text-xs font-medium`};
+`;
+
+export const Location = styled.div`
+  ${tw`text-xs italic`};
 `;
 
 export const Date = styled.div`
