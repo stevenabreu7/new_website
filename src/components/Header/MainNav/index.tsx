@@ -20,10 +20,10 @@ const mainNavItems: MainNavItem[] = [
   //   title: 'blog',
   //   slug: '/blog/'
   // },
-  // {
-  //   title: 'photos',
-  //   slug: '/photos/'
-  // },
+  {
+    title: 'photos',
+    slug: '/photos/'
+  },
   // {
   //   title: 'contact',
   //   slug: '/contact/'

@@ -12,7 +12,7 @@ interface Props {
 
 const BioItem: React.FC<Props> = ({ icon, text, link }) => (
   <Styled.ContactThing>
-    <Styled.Link href={link}>
+    <Styled.Link href={link} target="_blank">
       <Icon icon={icon} style={{color:"#000000", width:"15px", marginRight:"5px"}} />
       {text}
     </Styled.Link>

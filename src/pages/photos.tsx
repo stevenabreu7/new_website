@@ -2,13 +2,13 @@ import React from 'react';
 
 import Layout from 'components/Layout';
 import SEO from 'components/SEO';
-import Posts from 'components/Posts';
+import Galleries from 'components/Galleries';
 
 const PhotoPage: React.FC = () => {
   return (
     <Layout>
-      <SEO title="Photos" />
-      <Posts />
+      <SEO title="photos" />
+      <Galleries />
     </Layout>
   );
 };

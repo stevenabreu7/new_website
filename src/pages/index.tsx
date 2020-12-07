@@ -9,7 +9,7 @@ import HeroBio from 'components/HeroBio';
 const IndexPage: React.FC = () => {
   return (
     <Layout>
-      <SEO title="About Me" />
+      <SEO title="about" />
       {/* <HeroBanner /> */}
       <HeroBio />
       {/* <Services /> */}

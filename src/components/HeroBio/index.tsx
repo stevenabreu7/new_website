@@ -43,12 +43,15 @@ const HeroBio: React.FC = () => {
 
           <Styled.Content>
             <Styled.HeaderIntro>Hi, I'm Steve!</Styled.HeaderIntro>
-            <Styled.SubheaderIntro>I'm a PhD student at the University of Groningen</Styled.SubheaderIntro>
+            <Styled.SubheaderIntro>PhD student at the University of Groningen</Styled.SubheaderIntro>
             <Styled.IntroParagraph>
-              {"I am interested in complex systems, unconventional computing, human cognition and building wider artificial intelligence."}
+              I am interested in interdisciplinary research around artificial intelligence: unconventional nature-inspired computing, understanding the human mind, and building wider artificial intelligence.
             </Styled.IntroParagraph>
             <Styled.IntroParagraph>
-              {"I am currently working as a PhD student on non-digital computing theory with the goal of exploiting physical phenomena for computation - with particular attention to neuromorphic applications."}
+              Currently working as a PhD student on non-digital computing theory with the goal of exploiting physical phenomena for computation - focused on neuromorphic hardware in particular. I joined the <a target="_blank" href="http://ai.rug.nl/minds">MINDS</a> research group, funded through the European Commission's <a target="_blank" href="http://postdigital.astonphotonics.uk">post-digital</a> project.
+            </Styled.IntroParagraph>
+            <Styled.IntroParagraph>
+              I like to read, travel, take pictures, go to music concerts, and write about topics I care about.
             </Styled.IntroParagraph>
             <Styled.IntroParagraph>
               <i>

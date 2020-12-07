@@ -2,11 +2,16 @@ import styled from 'styled-components';
 import tw from 'tailwind.macro';
 
 export const LeftPanel = styled.div`
-  // display: flex-inline;
-  ${tw`w-full min-w-24 p-5 lg:p-10`};
+  ${tw`w-full min-w-24 py-5 sm:px-5 lg:p-10`};
 `;
 
 export const Contact = styled.div`
+  @media only screen and (max-width: 639px) {
+    float: left;
+    margin-left: 25px;
+    margin-bottom: -20px;
+    padding-bottom: 0px;
+  }
   ${tw``};
 `;
 
@@ -15,8 +20,11 @@ export const ContactThing = styled.p`
 `;
 
 export const Image = styled.img`
-  @media only screen and (max-width: 640px) {
-    max-width: 30%;
+  @media only screen and (max-width: 639px) {
+    // max-width: 40%;
+    // min-width: 100px;
+    width: 150px;
+    float: left;
   }
   ${tw`self-center mb-5 rounded-full`};
 `;
@@ -26,7 +34,10 @@ export const Banner = styled.section`
 `;
 
 export const Content = styled.div`
-  ${tw`py-10`};
+  @media only screen and (max-width: 639px) {
+    margin-top: -50px;
+  }
+  ${tw`py-10 lg:mx-5`};
 `;
 
 export const Superdiv = styled.div`
