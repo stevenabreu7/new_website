@@ -22,13 +22,17 @@ export const Image = styled.figure`
 `;
 
 export const Title = styled.h3`
+  display: inline !important;
+  float: left;
   ${tw`font-semibold -mb-4`};
 `;
 
 export const Description = styled.p``;
 
 export const Date = styled.h3`
-  ${tw`text-xs text-indigo-500`};
+  display: inline !important;
+  float: right;
+  ${tw`text-s text-indigo-500`};
 `;
 
 export const Tags = styled.div`

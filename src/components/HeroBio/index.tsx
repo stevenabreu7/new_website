@@ -45,7 +45,7 @@ const HeroBio: React.FC = () => {
             <Styled.HeaderIntro>Hi, I'm Steve!</Styled.HeaderIntro>
             <Styled.SubheaderIntro>PhD student at the University of Groningen</Styled.SubheaderIntro>
             <Styled.IntroParagraph>
-              I am interested in interdisciplinary research around artificial intelligence: unconventional nature-inspired computing, understanding the human mind, and building wider artificial intelligence.
+              I am interested in interdisciplinary research in and around artificial intelligence: unconventional nature-inspired computing, understanding the human mind, and building wider artificial intelligence.
             </Styled.IntroParagraph>
             <Styled.IntroParagraph>
               Currently working as a PhD student on non-digital computing theory with the goal of exploiting physical phenomena for computation - focused on neuromorphic hardware in particular. I joined the <a target="_blank" href="http://ai.rug.nl/minds">MINDS</a> research group, funded through the European Commission's <a target="_blank" href="http://postdigital.astonphotonics.uk">post-digital</a> project.

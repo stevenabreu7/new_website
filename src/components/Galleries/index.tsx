@@ -54,7 +54,7 @@ const Galleries: React.FC = () => {
             frontmatter {
               title
               description
-              date(formatString: "MMM DD, YYYY")
+              date(formatString: "MMM YYYY")
               tags
               cover {
                 childImageSharp {
@@ -96,11 +96,11 @@ const Galleries: React.FC = () => {
                       <Styled.Date>{date}</Styled.Date>
                       <Styled.Title>{title}</Styled.Title>
                     </Styled.Content>
-                    <Styled.Tags>
+                    {/* <Styled.Tags>
                       {tags.map((item) => (
                         <Styled.Tag key={item}>{item}</Styled.Tag>
                       ))}
-                    </Styled.Tags>
+                    </Styled.Tags> */}
                   </Styled.Card>
                 </motion.div>
               {/* </Link> */}
