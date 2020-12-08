@@ -1,9 +1,9 @@
 ---
 category: 'photos'
 cover: './cover.jpg'
-title: 'Hamburg, Germany'
-description: 'Black lives matter'
-date: '2020-06-06'
+title: 'Cartagena, Colombia'
+description: ''
+date: '2020-01-01'
 tags: ['People', 'City']
 published: true
 ---
