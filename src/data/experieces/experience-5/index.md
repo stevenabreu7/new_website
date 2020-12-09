@@ -7,4 +7,4 @@ startDate: 'Nov 2020'
 endDate: 'Present'
 ---
 
-More details coming.
+More information coming..
