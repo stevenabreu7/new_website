@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[14],{VoHF:function(e,t,n){"use strict";n.r(t);var a=n("q1tI"),o=n.n(a),l=n("VXBa"),u=n("6o60"),c=n("FJuR");t.default=function(){return o.a.createElement(l.a,null,o.a.createElement(u.a,{title:"Photos"}),o.a.createElement(c.a,null))}}}]);
-//# sourceMappingURL=component---src-pages-photos-tsx-7e575ba96478ab3dd31e.js.map
