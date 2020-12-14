@@ -1,5 +1,5 @@
 ---
 category: 'photos section'
-title: 'Some of my favorites'
-subtitle: 'Photos'
+title: ''
+subtitle: 'Photography'
 ---

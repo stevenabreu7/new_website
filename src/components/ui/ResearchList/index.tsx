@@ -28,9 +28,9 @@ const ResearchList: React.FC<PublicationProps> = (props) => (
   <Styled.Timeline>
     {/* <Styled.Point /> */}
     <Styled.Details>
-      <Styled.Image>
+      {/* <Styled.Image>
         <Img fluid={props.logo.childImageSharp.fluid} alt="" />
-      </Styled.Image>
+      </Styled.Image> */}
       <Styled.Title>{props.title}</Styled.Title>
       {(() => {
         if (props.award !== '') {

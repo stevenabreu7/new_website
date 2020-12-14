@@ -25,7 +25,7 @@ const mainNavItems: MainNavItem[] = [
   //   slug: '/blog/'
   // },
   {
-    title: 'photos',
+    title: 'photography',
     slug: '/photos/'
   },
   // {
