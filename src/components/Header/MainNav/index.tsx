@@ -27,11 +27,7 @@ const mainNavItems: MainNavItem[] = [
   {
     title: 'photography',
     slug: '/photos/'
-  },
-  // {
-  //   title: 'contact',
-  //   slug: '/contact/'
-  // }
+  }
 ];
 
 const MainNav: React.FC = () => {

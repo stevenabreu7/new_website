@@ -147,7 +147,11 @@ const Research: React.FC = () => {
       <Container section lg>
           {/* <TitleSection center={true} title={sectionTitle.title} subtitle={sectionTitle.subtitle} /> */}
 
+
         <TitleSection title="Research publications" subtitle="Publications" />
+
+        <p style={{marginBottom: '20px'}}>You can also view my publications on <a href="https://scholar.google.com/citations?user=CqbIOvMAAAAJ" target="_blank">Google Scholar</a>.</p>
+        
         <div style={{borderBottom: '1px solid #e2e8f0', paddingBottom: '40px', marginBottom: '40px'}}>
           {publications.map((item) => {
             let pub = item.node.frontmatter;

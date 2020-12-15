@@ -58,6 +58,9 @@ const Education: React.FC = () => {
 
   return (
     <Container section lg>
+      
+      <p style={{marginTop: '0px', marginBottom: '20px'}}>You can also view my <a href="https://linkedin.com/in/stevenabreu7" target="_blank">LinkedIn</a> profile.</p>
+      
       <TitleSection title={sectionTitle.title} subtitle={sectionTitle.subtitle} />
 
       {education.map((item) => {
