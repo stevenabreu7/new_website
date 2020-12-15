@@ -25,7 +25,6 @@ interface ExperienceProps {
 
 const ResearchExpList: React.FC<ExperienceProps> = (props) => (
   <Styled.Timeline>
-    {/* <Styled.Point /> */}
     <Styled.Details>
       <Styled.Image>
         <Img fluid={props.logo.childImageSharp.fluid} alt="" />

@@ -26,12 +26,12 @@ interface PublicationProps {
 
 const ResearchList: React.FC<PublicationProps> = (props) => (
   <Styled.Timeline>
-    {/* <Styled.Point /> */}
     <Styled.Details>
-      {/* <Styled.Image>
-        <Img fluid={props.logo.childImageSharp.fluid} alt="" />
-      </Styled.Image> */}
       <Styled.Title>{props.title}</Styled.Title>
+      <Styled.Subtitle> 
+        <FormatHtml content={props.authors.replace('Steven Abreu', '<i>Steven Abreu</i>')} />
+      </Styled.Subtitle>
+      <Styled.Location>{props.venue} (<a href={props.paperurl} target="_blank">link</a>)</Styled.Location>
       {(() => {
         if (props.award !== '') {
           return (
@@ -43,14 +43,9 @@ const ResearchList: React.FC<PublicationProps> = (props) => (
           )
         }
       })()}
-      <Styled.Subtitle> 
-        <FormatHtml content={props.authors.replace('Steven Abreu', '<i>Steven Abreu</i>')} />
-      </Styled.Subtitle>
-      <Styled.Location>{props.venue} (<a href={props.paperurl} target="_blank">link</a>)</Styled.Location>
     </Styled.Details>
     <Styled.Content>
       {props.abstract}
-      {/* {props.abstract.slice(0, props.abstract.indexOf('. ', 200)) + '...'} */}
     </Styled.Content>
   </Styled.Timeline>
 );

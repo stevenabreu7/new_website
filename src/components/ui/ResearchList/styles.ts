@@ -27,7 +27,7 @@ export const Note = styled.p`
 `;
 
 export const Title = styled.div`
-  ${tw`font-semibold mt-3`};
+  ${tw`font-semibold text-lg mt-3`};
 `;
 
 export const Subtitle = styled.div`
@@ -44,7 +44,7 @@ export const AwardTag = styled.p`
 `;
 
 export const AwardTagNote = styled.span`
-  ${tw`font-light ml-2`}
+  ${tw`font-normal ml-1`}
 `;
 
 export const Date = styled.div`

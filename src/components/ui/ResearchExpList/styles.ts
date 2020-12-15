@@ -27,7 +27,7 @@ export const Note = styled.p`
 `;
 
 export const Title = styled.div`
-  ${tw`font-semibold`};
+  ${tw`font-semibold text-lg`};
 `;
 
 export const Subtitle = styled.div`

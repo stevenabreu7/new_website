@@ -148,15 +148,18 @@ const Research: React.FC = () => {
           {/* <TitleSection center={true} title={sectionTitle.title} subtitle={sectionTitle.subtitle} /> */}
 
         <TitleSection title="Research publications" subtitle="Publications" />
+        <div style={{borderBottom: '1px solid #e2e8f0', paddingBottom: '40px', marginBottom: '40px'}}>
           {publications.map((item) => {
             let pub = item.node.frontmatter;
             return (
               <ResearchList {...pub} />
             );
           })}
+        </div>
             
-          <hr/>
+        <hr/>
 
+        <div>
           <TitleSection title="Research projects" subtitle="Research Experience" />
           {experiences.map((item) => {
               let exp = item.node.frontmatter;
@@ -165,6 +168,7 @@ const Research: React.FC = () => {
                 <ResearchExpList {...exp} />
               );
           })}
+        </div>
       </Container>
   );
 };
