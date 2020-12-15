@@ -57,7 +57,7 @@ const Education: React.FC = () => {
   const education: Education[] = allMarkdownRemark.edges;
 
   return (
-    <Container section>
+    <Container section lg>
       <TitleSection title={sectionTitle.title} subtitle={sectionTitle.subtitle} />
 
       {education.map((item) => {

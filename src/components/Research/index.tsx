@@ -144,20 +144,20 @@ const Research: React.FC = () => {
   const experiences: Experience[] = experienceRemark.edges;
 
   return (
-    // <Styled.Banner>
-      <Container section>
-        <Styled.ThisContainer>
-          <TitleSection center={true} title={sectionTitle.title} subtitle={sectionTitle.subtitle} />
+      <Container section lg>
+          {/* <TitleSection center={true} title={sectionTitle.title} subtitle={sectionTitle.subtitle} /> */}
 
-          <TitleSection title="" subtitle="Publications" />
-            {publications.map((item) => {
-              let pub = item.node.frontmatter;
-              return (
-                <ResearchList {...pub} />
-              );
-            })}
-        
-          <TitleSection title="" subtitle="Research Experience" />
+        <TitleSection title="Research publications" subtitle="Publications" />
+          {publications.map((item) => {
+            let pub = item.node.frontmatter;
+            return (
+              <ResearchList {...pub} />
+            );
+          })}
+            
+          <hr/>
+
+          <TitleSection title="Research projects" subtitle="Research Experience" />
           {experiences.map((item) => {
               let exp = item.node.frontmatter;
               exp.html = item.node.html;
@@ -165,9 +165,7 @@ const Research: React.FC = () => {
                 <ResearchExpList {...exp} />
               );
           })}
-        </Styled.ThisContainer>
       </Container>
-    // </Styled.Banner>
   );
 };
 

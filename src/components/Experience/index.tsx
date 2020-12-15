@@ -56,7 +56,7 @@ const Experience: React.FC = () => {
   const experiences: Experience[] = allMarkdownRemark.edges;
 
   return (
-    <Container section>
+    <Container section lg>
       <TitleSection title={sectionTitle.title} subtitle={sectionTitle.subtitle} />
 
       {experiences.map((item) => {
