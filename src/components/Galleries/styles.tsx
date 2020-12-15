@@ -50,7 +50,17 @@ export const NewContainer = styled.div`
 `;
 
 export const NewImageContainer = styled.div`
-  ${tw`w-full sm:w-1/2 md:w-2/6 p-1`};
+  @media only screen and (max-width: 440px) {
+    width: 100%;
+  }
+  ${tw`w-1/2 md:w-2/6 p-1`};
+`;
+
+export const NewPortImageContainer = styled.div`
+  @media only screen and (max-width: 440px) {
+    width: 50%;
+  }
+  ${tw`w-1/4 md:w-1/6 p-1`};
 `;
 
 // export const NewCard = styled.div`

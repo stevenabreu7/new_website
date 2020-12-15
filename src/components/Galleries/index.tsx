@@ -10,6 +10,7 @@ import TitleSection from 'components/ui/TitleSection';
 import { SectionTitle, ImageSharpFluid } from 'helpers/definitions';
 
 import * as Styled from './styles';
+import Button from 'components/ui/Button';
 
 interface Post {
   node: {
@@ -38,7 +39,43 @@ function shuffleArray(array: any[]) {
   }
 }
 
+function sortForDisplay(posts: Post[]) {
+  let needPortraitNow = false;
+  for (let i = 0; i < posts.length-1; i++) {
+    let isLandscape = posts[i].node.frontmatter.cover.childImageSharp.fluid.aspectRatio > 1;
+    if (!needPortraitNow && isLandscape) {
+      // nothing changes, continue
+      continue;
+    } else if (!needPortraitNow && !isLandscape) {
+      // will need a portrait one next! -> get next portrait
+      let nextPortrait = -1;
+      for (let j = i+1; j < posts.length; j++) {
+        if (posts[j].node.frontmatter.cover.childImageSharp.fluid.aspectRatio <= 1) {
+          nextPortrait = j;
+          break;
+        }
+      }
+      if (nextPortrait == -1) {
+        // no more portraits -> move this one to the very back and we're done
+        [posts[i], posts[posts.length-1]] = [posts[posts.length-1], posts[i]];
+      } else {
+        // change the next one with the next portrait
+        [posts[i+1], posts[nextPortrait]] = [posts[nextPortrait], posts[i+1]];
+      }
+      needPortraitNow = true;
+    } else if (needPortraitNow && isLandscape) {
+      // need portrait, got landscape -> change!
+      console.console.error('THIS SHOULD NOT HAPPEN');
+    } else {
+      // need portrait, got portrait - no longer need portrait
+      needPortraitNow = false;
+      continue;
+    }
+  }
+}
+
 const Galleries: React.FC = () => {
+  
   const { markdownRemark, allMarkdownRemark } = useStaticQuery(graphql`
     query {
       markdownRemark(frontmatter: { category: { eq: "photos section" } }) {
@@ -61,7 +98,7 @@ const Galleries: React.FC = () => {
             frontmatter {
               title
               description
-              date(formatString: "MMM YYYY")
+              date
               tags
               cover {
                 childImageSharp {
@@ -77,15 +114,20 @@ const Galleries: React.FC = () => {
     }
   `);
 
+  // date(formatString: "MMM YYYY")
+
   const sectionTitle: SectionTitle = markdownRemark.frontmatter;
-  const posts: Post[] = allMarkdownRemark.edges;
+  let posts: Post[] = allMarkdownRemark.edges;
   shuffleArray(posts);
+  sortForDisplay(posts);
 
   return (
-    <Container section>
+    <Container section none>
       <TitleSection title={sectionTitle.title} subtitle={sectionTitle.subtitle} center />
 
-      <Styled.Introduction>I like to take photos because...</Styled.Introduction>
+      <Styled.Introduction>
+        I like to take photos because...
+      </Styled.Introduction>
 
       <Styled.NewContainer>
         {posts.map((item) => {
@@ -94,19 +136,25 @@ const Galleries: React.FC = () => {
             fields: { slug },
             frontmatter: { title, cover, description, date, tags }
           } = item.node;
-          return (
-            <Styled.NewImageContainer>
-              {/* <Styled.NewCard> */}
-                <Styled.NewImage>
-                  <Img fluid={cover.childImageSharp.fluid} alt={title} />
-                </Styled.NewImage>
-                {/* <Styled.Content>
-                  <Styled.Date>{date}</Styled.Date>
-                  <Styled.Title>{title}</Styled.Title>
-                </Styled.Content> */}
-              {/* </Styled.NewCard> */}
-            </Styled.NewImageContainer>
-          );
+          if (cover.childImageSharp.fluid) {
+            if (cover.childImageSharp.fluid.aspectRatio <= 1) {
+              return (
+                <Styled.NewPortImageContainer>
+                    <Styled.NewImage>
+                      <Img fluid={cover.childImageSharp.fluid} alt={title} />
+                    </Styled.NewImage>
+                </Styled.NewPortImageContainer>
+              );
+            } else {
+              return (
+                <Styled.NewImageContainer>
+                    <Styled.NewImage>
+                      <Img fluid={cover.childImageSharp.fluid} alt={title} />
+                    </Styled.NewImage>
+                </Styled.NewImageContainer>
+              );
+            }
+          }
         })}
       </Styled.NewContainer>
     </Container>
