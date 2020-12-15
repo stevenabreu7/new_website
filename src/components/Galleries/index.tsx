@@ -31,6 +31,13 @@ interface Post {
   };
 }
 
+function shuffleArray(array: any[]) {
+  for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+  }
+}
+
 const Galleries: React.FC = () => {
   const { markdownRemark, allMarkdownRemark } = useStaticQuery(graphql`
     query {
@@ -72,44 +79,77 @@ const Galleries: React.FC = () => {
 
   const sectionTitle: SectionTitle = markdownRemark.frontmatter;
   const posts: Post[] = allMarkdownRemark.edges;
+  shuffleArray(posts);
 
   return (
     <Container section>
       <TitleSection title={sectionTitle.title} subtitle={sectionTitle.subtitle} center />
-      <Styled.Posts>
+
+      <Styled.Introduction>I like to take photos because...</Styled.Introduction>
+
+      <Styled.NewContainer>
         {posts.map((item) => {
           const {
             id,
             fields: { slug },
             frontmatter: { title, cover, description, date, tags }
           } = item.node;
-
           return (
-            <Styled.Post key={id}>
-              {/* <Link to={slug}> */}
-                <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 1 }}>
-                  <Styled.Card>
-                    <Styled.Image>
-                      <Img fluid={cover.childImageSharp.fluid} alt={title} />
-                    </Styled.Image>
-                    <Styled.Content>
-                      <Styled.Date>{date}</Styled.Date>
-                      <Styled.Title>{title}</Styled.Title>
-                    </Styled.Content>
-                    {/* <Styled.Tags>
-                      {tags.map((item) => (
-                        <Styled.Tag key={item}>{item}</Styled.Tag>
-                      ))}
-                    </Styled.Tags> */}
-                  </Styled.Card>
-                </motion.div>
-              {/* </Link> */}
-            </Styled.Post>
+            <Styled.NewImageContainer>
+              {/* <Styled.NewCard> */}
+                <Styled.NewImage>
+                  <Img fluid={cover.childImageSharp.fluid} alt={title} />
+                </Styled.NewImage>
+                {/* <Styled.Content>
+                  <Styled.Date>{date}</Styled.Date>
+                  <Styled.Title>{title}</Styled.Title>
+                </Styled.Content> */}
+              {/* </Styled.NewCard> */}
+            </Styled.NewImageContainer>
           );
         })}
-      </Styled.Posts>
+      </Styled.NewContainer>
     </Container>
-  );
+  )
+
+  // return (
+  //   <Container section>
+  //     <TitleSection title={sectionTitle.title} subtitle={sectionTitle.subtitle} center />
+
+  //     <Styled.Posts>
+  //       {posts.map((item) => {
+  //         const {
+  //           id,
+  //           fields: { slug },
+  //           frontmatter: { title, cover, description, date, tags }
+  //         } = item.node;
+
+  //         return (
+  //           <Styled.Post key={id}>
+  //             {/* <Link to={slug}> */}
+  //               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 1 }}>
+  //                 <Styled.Card>
+  //                   <Styled.Image>
+  //                     <Img fluid={cover.childImageSharp.fluid} alt={title} />
+  //                   </Styled.Image>
+  //                   <Styled.Content>
+  //                     <Styled.Date>{date}</Styled.Date>
+  //                     <Styled.Title>{title}</Styled.Title>
+  //                   </Styled.Content>
+  //                   {/* <Styled.Tags>
+  //                     {tags.map((item) => (
+  //                       <Styled.Tag key={item}>{item}</Styled.Tag>
+  //                     ))}
+  //                   </Styled.Tags> */}
+  //                 </Styled.Card>
+  //               </motion.div>
+  //             {/* </Link> */}
+  //           </Styled.Post>
+  //         );
+  //       })}
+  //     </Styled.Posts>
+  //   </Container>
+  // );
 };
 
 export default Galleries;

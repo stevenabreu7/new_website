@@ -1,5 +1,5 @@
 ---
 category: 'photos section'
-title: ''
-subtitle: 'Photography'
+title: 'Photography Portfolio'
+subtitle: 'Gallery'
 ---
