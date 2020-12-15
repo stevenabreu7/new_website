@@ -49,15 +49,10 @@ const HeroBio: React.FC = () => {
               I am interested in interdisciplinary research in and around computer science and artificial intelligence: unconventional nature-inspired computing, understanding the human mind, and building wider artificial intelligence.
             </Styled.IntroParagraph>
             <Styled.IntroParagraph>
-              Currently working as a PhD student on non-digital computing theory with the goal of exploiting physical phenomena for computation - focused on neuromorphic hardware in particular. I joined the <a target="_blank" href="https://www.ai.rug.nl/minds/">MINDS</a> research group, funded through the European Commission's <a target="_blank" href="http://postdigital.astonphotonics.uk">post-digital</a> project.
+              Currently working as a PhD student on non-digital computing theory with the goal of exploiting physical phenomena for computation - focused on neuromorphic hardware in particular. I joined the <a target="_blank" href="https://www.ai.rug.nl/minds/">MINDS</a> research group, funded through the European Commission's <a target="_blank" href="http://postdigital.astonphotonics.uk">post-digital</a> training network.
             </Styled.IntroParagraph>
             <Styled.IntroParagraph>
               In my free time, I am a hobby photographer, like to read, travel, go to music and art events, and occasionally write about topics I care about.
-            </Styled.IntroParagraph>
-            <Styled.IntroParagraph>
-              <i>
-                {"This website is still under construction..."}
-              </i>
             </Styled.IntroParagraph>
           </Styled.Content>
         </Styled.Superdiv>

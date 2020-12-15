@@ -43,6 +43,10 @@ export const AwardTag = styled.p`
   ${tw`text-s font-medium rounded-md`};
 `;
 
+export const AwardTagNote = styled.span`
+  ${tw`font-light ml-2`}
+`;
+
 export const Date = styled.div`
   ${tw`text-xs border  border-teal-400 rounded-full px-2`};
   width: fit-content;

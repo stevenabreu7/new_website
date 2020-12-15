@@ -7,6 +7,7 @@ import * as Styled from './styles';
 import Icon from '../Icon';
 
 interface ExperienceProps {
+  html: string;
   location: string;
   institution: string;
   group: string;
@@ -42,6 +43,7 @@ const ResearchExpList: React.FC<ExperienceProps> = (props) => (
     </Styled.Details>
     <Styled.Content>
       {props.description}
+      <FormatHtml content={props.html} />
     </Styled.Content>
   </Styled.Timeline>
 );

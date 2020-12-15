@@ -16,6 +16,7 @@ import ResearchExpList from 'components/ui/ResearchExpList';
 interface Experience {
   node: {
     id: string;
+    html: string;
     fields: {
       slug: string;
     };
@@ -159,6 +160,7 @@ const Research: React.FC = () => {
           <TitleSection title="" subtitle="Research Experience" />
           {experiences.map((item) => {
               let exp = item.node.frontmatter;
+              exp.html = item.node.html;
               return (
                 <ResearchExpList {...exp} />
               );

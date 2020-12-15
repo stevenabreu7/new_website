@@ -37,7 +37,8 @@ const ResearchList: React.FC<PublicationProps> = (props) => (
           return (
           <Styled.AwardTag>
             <Icon icon={["fa", "trophy"]} style={{color:"#000000", width:"15px", marginRight:"5px"}} />
-            {props.award}
+            {props.award.split('(')[0].trim()} 
+            <Styled.AwardTagNote>({props.award.split('(')[1].trim()}</Styled.AwardTagNote>
           </Styled.AwardTag>
           )
         }
