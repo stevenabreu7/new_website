@@ -73,5 +73,5 @@ export const NewImage = styled.figure`
 
 export const Introduction = styled.p`
   margin: 0 auto;
-  ${tw`text-center w-1/2 pb-4`};
+  ${tw`text-center max-w-4xl pb-4`};
 `;

@@ -126,7 +126,9 @@ const Galleries: React.FC = () => {
       <TitleSection title={sectionTitle.title} subtitle={sectionTitle.subtitle} center />
 
       <Styled.Introduction>
-        I like to take photos because...
+Photography enables us to go where language cannot go, to simply experience and appreciate.
+To freeze time, to eternalize a moment, to capture truth or to distort it.
+Below you can see through my eyes: friends, strangers, stories, ideas.
       </Styled.Introduction>
 
       <Styled.NewContainer>
